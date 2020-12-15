@@ -336,18 +336,3 @@ case 3,4:
 default:
     print("值是default")
 }
-
-//struct是值类型，class是引用类型
-//关于值类型和引用类型的区别
-//值类型进行拷贝的时候是深拷贝(个人理解是复制一个对象，和源对象不同，是单独的一个对象)，存储在栈中，所以改变源对象不会改变拷贝的对象，反之同理，例如:
-//引用类型在堆中，引用的赋值是浅拷贝（变量名不同，但是指向同一个对象）
-struct Teacher{
-    var name:String
-    var sex:String
-}
-
-var teacher1 = Teacher(name:"lixiaojun",sex:"male")
-var teacher2 = teacher1//这里进行深拷贝
-teacher2.name = "pangqiuyue"
-teacher2.sex = "female"
-print("teacher1.name=\(teacher1.name),teacher1.sex=\(teacher1.sex)")
